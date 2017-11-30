@@ -44,5 +44,19 @@ networks: {
       gas: 4700000 
     }
   },
+  solc: {
+    optimizer: {
+      enabled: true,
+      runs: 200
+    },
+    metadata: { useLiteralContent: true },
+    outputSelection: {
+      "*": {
+        "*": [
+          "metadata",
+        ]
+    },
+    }
+  },
   migrations_directory: './migrations'
 }

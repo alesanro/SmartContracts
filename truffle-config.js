@@ -5,13 +5,21 @@ networks: {
       port: 8545,
       network_id: '*', // Match any network id
       gas: 4700000
+    }
+  },
+  solc: {
+    optimizer: {
+      enabled: true,
+      runs: 200
     },
-    test: {
-     network_id: 424242,
-     host: 'localhost',
-     port: 8545,
-     gas: 4700000
-   }
+    metadata: { useLiteralContent: true },
+    outputSelection: {
+      "*": {
+        "*": [
+          "metadata",
+        ]
+    },
+    }
   },
   migrations_directory: './migrations'
 }
