@@ -1,0 +1,195 @@
+{
+  "contractName": "Stub",
+  "abi": [
+    {
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    }
+  ],
+  "bytecode": "0x60606040523415600e57600080fd5b603c80601b6000396000f30060606040523415600e57600080fd5b0000a165627a7a723058200a233829389eee8120193734d8a75cff19d4871d12c7e828186c12ffdbc16b070029",
+  "deployedBytecode": "0x60606040523415600e57600080fd5b0000a165627a7a723058200a233829389eee8120193734d8a75cff19d4871d12c7e828186c12ffdbc16b070029",
+  "sourceMap": "51:42:82:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "51:42:82:-;;;;;;;;;;;",
+  "source": "pragma solidity ^0.4.11;\n\n// For testing purposes.\ncontract Stub {\n    function() public {}\n}\n",
+  "sourcePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/helpers/Stub.sol",
+  "ast": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/helpers/Stub.sol",
+    "exportedSymbols": {
+      "Stub": [
+        24408
+      ]
+    },
+    "id": 24409,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 24403,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:82"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 24408,
+        "linearizedBaseContracts": [
+          24408
+        ],
+        "name": "Stub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 24406,
+              "nodeType": "Block",
+              "src": "89:2:82",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 24407,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 24404,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:2:82"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 24405,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "89:0:82"
+            },
+            "scope": 24408,
+            "src": "71:20:82",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 24409,
+        "src": "51:42:82"
+      }
+    ],
+    "src": "0:94:82"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/helpers/Stub.sol",
+    "exportedSymbols": {
+      "Stub": [
+        24408
+      ]
+    },
+    "id": 24409,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 24403,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:82"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 24408,
+        "linearizedBaseContracts": [
+          24408
+        ],
+        "name": "Stub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 24406,
+              "nodeType": "Block",
+              "src": "89:2:82",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 24407,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 24404,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:2:82"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 24405,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "89:0:82"
+            },
+            "scope": 24408,
+            "src": "71:20:82",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 24409,
+        "src": "51:42:82"
+      }
+    ],
+    "src": "0:94:82"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {
+    "1": {
+      "links": {},
+      "events": {},
+      "updated_at": 1502132959384
+    },
+    "4": {
+      "links": {},
+      "events": {},
+      "updated_at": 1502123774541
+    },
+    "42": {
+      "links": {},
+      "events": {},
+      "updated_at": 1502111764398
+    },
+    "1506859110923": {
+      "events": {},
+      "links": {},
+      "address": "0x8023f8e3c739516f43566feb6ceae50696d04d0c",
+      "updated_at": 1506859178123
+    }
+  },
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-06T09:20:58.728Z"
+}

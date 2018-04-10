@@ -1,0 +1,283 @@
+{
+  "contractName": "Clock",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "time",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60606040523415600e57600080fd5b60958061001c6000396000f300606060405260043610603e5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166316ada54781146043575b600080fd5b3415604d57600080fd5b60536065565b60405190815260200160405180910390f35b42905600a165627a7a723058203a7bfa6f84f39a2126413e1e876dd5166d3a6f7835e3821014e86013a7fba9d70029",
+  "deployedBytecode": "0x606060405260043610603e5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166316ada54781146043575b600080fd5b3415604d57600080fd5b60536065565b60405190815260200160405180910390f35b42905600a165627a7a723058203a7bfa6f84f39a2126413e1e876dd5166d3a6f7835e3821014e86013a7fba9d70029",
+  "sourceMap": "26:93:75:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:93:75:-;;;;;;;;;;;;;;;;;;;;;;;47:70;;;;;;;;;;;;;;;;;;;;;;;;;;;;107:3;47:70;:::o",
+  "source": "pragma solidity ^0.4.11;\n\ncontract Clock {\n    function time() public view returns (uint) {\n        return now;\n    }\n}\n",
+  "sourcePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/helpers/Clock.sol",
+  "ast": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/helpers/Clock.sol",
+    "exportedSymbols": {
+      "Clock": [
+        24017
+      ]
+    },
+    "id": 24018,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 24008,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:75"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 24017,
+        "linearizedBaseContracts": [
+          24017
+        ],
+        "name": "Clock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 24015,
+              "nodeType": "Block",
+              "src": "90:27:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 24013,
+                    "name": "now",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 38670,
+                    "src": "107:3:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 24012,
+                  "id": 24014,
+                  "nodeType": "Return",
+                  "src": "100:10:75"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 24016,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "time",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 24009,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "60:2:75"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 24012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24011,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24016,
+                  "src": "84:4:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24010,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "84:4:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "83:6:75"
+            },
+            "scope": 24017,
+            "src": "47:70:75",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 24018,
+        "src": "26:93:75"
+      }
+    ],
+    "src": "0:120:75"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/helpers/Clock.sol",
+    "exportedSymbols": {
+      "Clock": [
+        24017
+      ]
+    },
+    "id": 24018,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 24008,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:75"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 24017,
+        "linearizedBaseContracts": [
+          24017
+        ],
+        "name": "Clock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 24015,
+              "nodeType": "Block",
+              "src": "90:27:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 24013,
+                    "name": "now",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 38670,
+                    "src": "107:3:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 24012,
+                  "id": 24014,
+                  "nodeType": "Return",
+                  "src": "100:10:75"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 24016,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "time",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 24009,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "60:2:75"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 24012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24011,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24016,
+                  "src": "84:4:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24010,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "84:4:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "83:6:75"
+            },
+            "scope": 24017,
+            "src": "47:70:75",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 24018,
+        "src": "26:93:75"
+      }
+    ],
+    "src": "0:120:75"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {
+    "1506859110923": {
+      "events": {},
+      "links": {},
+      "address": "0xd7b9beb026b6ba03e1884eb0a89b992b9179fd96",
+      "updated_at": 1506859178127
+    }
+  },
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-06T09:20:58.720Z"
+}

@@ -1,0 +1,1958 @@
+{
+  "contractName": "VotingManagerInterface",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getVoteLimit",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPollsCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_startIndex",
+          "type": "uint256"
+        },
+        {
+          "name": "_pageSize",
+          "type": "uint32"
+        }
+      ],
+      "name": "getPollsPaginated",
+      "outputs": [
+        {
+          "name": "_votings",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getActivePollsCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_polls",
+          "type": "address[]"
+        }
+      ],
+      "name": "getPollsDetails",
+      "outputs": [
+        {
+          "name": "_owner",
+          "type": "address[]"
+        },
+        {
+          "name": "_detailsIpfsHash",
+          "type": "bytes32[]"
+        },
+        {
+          "name": "_votelimit",
+          "type": "uint256[]"
+        },
+        {
+          "name": "_deadline",
+          "type": "uint256[]"
+        },
+        {
+          "name": "_status",
+          "type": "bool[]"
+        },
+        {
+          "name": "_active",
+          "type": "bool[]"
+        },
+        {
+          "name": "_creation",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_percent",
+          "type": "uint256"
+        }
+      ],
+      "name": "setVotesPercent",
+      "outputs": [
+        {
+          "name": "_resultCode",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_optionsCount",
+          "type": "uint256"
+        },
+        {
+          "name": "_detailsIpfsHash",
+          "type": "bytes32"
+        },
+        {
+          "name": "_votelimit",
+          "type": "uint256"
+        },
+        {
+          "name": "_deadline",
+          "type": "uint256"
+        }
+      ],
+      "name": "createPoll",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.11;\n\n\n/// @title Defines public interface for voting managers.\ncontract VotingManagerInterface {\n\n    /** Getters */\n\n    /// @notice Gets vote limit that was setup for a manager\n    function getVoteLimit() public view returns (uint);\n\n    /// @notice Gets a number of polls registered in a manager\n    function getPollsCount() public view returns (uint);\n\n    /// @notice Requests paginated results for a list of polls.\n    function getPollsPaginated(uint _startIndex, uint32 _pageSize) public view returns (address[] _votings);\n\n    /// @notice Gets a number of active polls. Could be restricted to some upper bounds.\n    function getActivePollsCount() public view returns (uint);\n\n    /// @notice Gets detailed info for a list of provided polls.\n    function getPollsDetails(address[] _polls) public view returns (\n        address[] _owner,\n        bytes32[] _detailsIpfsHash,\n        uint[] _votelimit,\n        uint[] _deadline,\n        bool[] _status,\n        bool[] _active,\n        uint[] _creation\n    );\n\n\n    /** Actions */\n\n    /// @notice Updates percents of total shares that should be locked (put) in a poll to say that poll is legally completed\n    function setVotesPercent(uint _percent) public returns (uint _resultCode);\n\n    /// @notice Creates a new poll and register it in a manager.\n    function createPoll(\n        uint _optionsCount,\n        bytes32 _detailsIpfsHash,\n        uint _votelimit,\n        uint _deadline\n    ) public returns (uint);\n}\n",
+  "sourcePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/vote/VotingManagerInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/vote/VotingManagerInterface.sol",
+    "exportedSymbols": {
+      "VotingManagerInterface": [
+        35653
+      ]
+    },
+    "id": 35654,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 35580,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:116"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Defines public interface for voting managers.",
+        "fullyImplemented": false,
+        "id": 35653,
+        "linearizedBaseContracts": [
+          35653
+        ],
+        "name": "VotingManagerInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Gets vote limit that was setup for a manager",
+            "id": 35585,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getVoteLimit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35581,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35584,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35583,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35585,
+                  "src": "249:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35582,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "249:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "248:6:116"
+            },
+            "scope": 35653,
+            "src": "204:51:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets a number of polls registered in a manager",
+            "id": 35590,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getPollsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35586,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "346:2:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35589,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35588,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35590,
+                  "src": "370:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35587,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "369:6:116"
+            },
+            "scope": 35653,
+            "src": "324:52:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Requests paginated results for a list of polls.",
+            "id": 35600,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getPollsPaginated",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35595,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35592,
+                  "name": "_startIndex",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35600,
+                  "src": "473:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35591,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35594,
+                  "name": "_pageSize",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35600,
+                  "src": "491:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 35593,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "491:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "472:36:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35599,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35598,
+                  "name": "_votings",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35600,
+                  "src": "530:18:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35596,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "530:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 35597,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "530:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "529:20:116"
+            },
+            "scope": 35653,
+            "src": "446:104:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets a number of active polls. Could be restricted to some upper bounds.",
+            "id": 35605,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getActivePollsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35601,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "673:2:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35604,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35603,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35605,
+                  "src": "697:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35602,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:6:116"
+            },
+            "scope": 35653,
+            "src": "645:58:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets detailed info for a list of provided polls.",
+            "id": 35632,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getPollsDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35609,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35608,
+                  "name": "_polls",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "799:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35606,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "799:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 35607,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "799:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "798:18:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35631,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35612,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "847:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35610,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "847:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 35611,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "847:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35615,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "873:26:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35613,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "873:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 35614,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "873:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35618,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "909:17:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35616,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "909:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 35617,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "909:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35621,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "936:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35619,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "936:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 35620,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "936:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35624,
+                  "name": "_status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "962:14:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35622,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "962:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 35623,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "962:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35627,
+                  "name": "_active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "986:14:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35625,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "986:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 35626,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "986:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35630,
+                  "name": "_creation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "1010:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35628,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1010:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 35629,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1010:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "837:195:116"
+            },
+            "scope": 35653,
+            "src": "774:259:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Updates percents of total shares that should be locked (put) in a poll to say that poll is legally completed",
+            "id": 35639,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setVotesPercent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35635,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35634,
+                  "name": "_percent",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35639,
+                  "src": "1210:13:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35633,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1210:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1209:15:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35638,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35637,
+                  "name": "_resultCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35639,
+                  "src": "1241:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35636,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1241:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1240:18:116"
+            },
+            "scope": 35653,
+            "src": "1185:74:116",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Creates a new poll and register it in a manager.",
+            "id": 35652,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35648,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35641,
+                  "name": "_optionsCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1359:18:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35640,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1359:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35643,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1387:24:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 35642,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1387:7:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35645,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1421:15:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35644,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1421:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35647,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1446:14:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35646,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1446:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1349:117:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35650,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1483:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35649,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1483:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1482:6:116"
+            },
+            "scope": 35653,
+            "src": "1330:159:116",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 35654,
+        "src": "84:1407:116"
+      }
+    ],
+    "src": "0:1492:116"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/vote/VotingManagerInterface.sol",
+    "exportedSymbols": {
+      "VotingManagerInterface": [
+        35653
+      ]
+    },
+    "id": 35654,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 35580,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:116"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Defines public interface for voting managers.",
+        "fullyImplemented": false,
+        "id": 35653,
+        "linearizedBaseContracts": [
+          35653
+        ],
+        "name": "VotingManagerInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Gets vote limit that was setup for a manager",
+            "id": 35585,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getVoteLimit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35581,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35584,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35583,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35585,
+                  "src": "249:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35582,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "249:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "248:6:116"
+            },
+            "scope": 35653,
+            "src": "204:51:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets a number of polls registered in a manager",
+            "id": 35590,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getPollsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35586,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "346:2:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35589,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35588,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35590,
+                  "src": "370:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35587,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "369:6:116"
+            },
+            "scope": 35653,
+            "src": "324:52:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Requests paginated results for a list of polls.",
+            "id": 35600,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getPollsPaginated",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35595,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35592,
+                  "name": "_startIndex",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35600,
+                  "src": "473:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35591,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35594,
+                  "name": "_pageSize",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35600,
+                  "src": "491:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 35593,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "491:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "472:36:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35599,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35598,
+                  "name": "_votings",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35600,
+                  "src": "530:18:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35596,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "530:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 35597,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "530:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "529:20:116"
+            },
+            "scope": 35653,
+            "src": "446:104:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets a number of active polls. Could be restricted to some upper bounds.",
+            "id": 35605,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getActivePollsCount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35601,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "673:2:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35604,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35603,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35605,
+                  "src": "697:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35602,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:6:116"
+            },
+            "scope": 35653,
+            "src": "645:58:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets detailed info for a list of provided polls.",
+            "id": 35632,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getPollsDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35609,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35608,
+                  "name": "_polls",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "799:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35606,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "799:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 35607,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "799:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "798:18:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35631,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35612,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "847:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35610,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "847:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 35611,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "847:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35615,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "873:26:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35613,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "873:7:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 35614,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "873:9:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35618,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "909:17:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35616,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "909:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 35617,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "909:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35621,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "936:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35619,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "936:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 35620,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "936:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35624,
+                  "name": "_status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "962:14:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35622,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "962:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 35623,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "962:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35627,
+                  "name": "_active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "986:14:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35625,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "986:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 35626,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "986:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35630,
+                  "name": "_creation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35632,
+                  "src": "1010:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 35628,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1010:4:116",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 35629,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1010:6:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "837:195:116"
+            },
+            "scope": 35653,
+            "src": "774:259:116",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Updates percents of total shares that should be locked (put) in a poll to say that poll is legally completed",
+            "id": 35639,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setVotesPercent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35635,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35634,
+                  "name": "_percent",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35639,
+                  "src": "1210:13:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35633,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1210:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1209:15:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35638,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35637,
+                  "name": "_resultCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35639,
+                  "src": "1241:16:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35636,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1241:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1240:18:116"
+            },
+            "scope": 35653,
+            "src": "1185:74:116",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Creates a new poll and register it in a manager.",
+            "id": 35652,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 35648,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35641,
+                  "name": "_optionsCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1359:18:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35640,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1359:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35643,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1387:24:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 35642,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1387:7:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35645,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1421:15:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35644,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1421:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35647,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1446:14:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35646,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1446:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1349:117:116"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35650,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35652,
+                  "src": "1483:4:116",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35649,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1483:4:116",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1482:6:116"
+            },
+            "scope": 35653,
+            "src": "1330:159:116",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 35654,
+        "src": "84:1407:116"
+      }
+    ],
+    "src": "0:1492:116"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-06T09:20:58.902Z"
+}

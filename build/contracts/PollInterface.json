@@ -1,0 +1,3185 @@
+{
+  "contractName": "PollInterface",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimContractOwnership",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "changeContractOwnership",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "transferContractOwnership",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "active",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_member",
+          "type": "address"
+        }
+      ],
+      "name": "memberOptions",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "hasMember",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_listener",
+          "type": "address"
+        }
+      ],
+      "name": "setPollListener",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_optionsCount",
+          "type": "uint256"
+        },
+        {
+          "name": "_detailsIpfsHash",
+          "type": "bytes32"
+        },
+        {
+          "name": "_votelimit",
+          "type": "uint256"
+        },
+        {
+          "name": "_deadline",
+          "type": "uint256"
+        }
+      ],
+      "name": "init",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_choice",
+          "type": "uint8"
+        }
+      ],
+      "name": "vote",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "activatePoll",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "endPoll",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "killPoll",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getDetails",
+      "outputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_detailsIpfsHash",
+          "type": "bytes32"
+        },
+        {
+          "name": "_votelimit",
+          "type": "uint256"
+        },
+        {
+          "name": "_deadline",
+          "type": "uint256"
+        },
+        {
+          "name": "_status",
+          "type": "bool"
+        },
+        {
+          "name": "_active",
+          "type": "bool"
+        },
+        {
+          "name": "_creation",
+          "type": "uint256"
+        },
+        {
+          "name": "_optionsCount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getVotesBalances",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8[]"
+        },
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_detailsIpfsHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "updatePollDetailsIpfsHash",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.11;\n\nimport \"../core/common/OwnedInterface.sol\";\n\n\n/// @title Defines public interface for polls: how to interact and what could be asked.\ncontract PollInterface is OwnedInterface {\n\n    /** Getters */\n\n    /// @notice Gets poll's owner address\n    function owner() public view returns (address);\n\n    /// @notice Gets if poll is active or not\n    function active() public view returns (bool);\n\n    /// @notice Gets an index of an option chosen by user\n    /// @param _member voted user\n    /// @return choice of provided user\n    function memberOptions(address _member) public view returns (uint8);\n\n    /// @notice Checks if provided user is already voted in this poll\n    /// @param _user user to check\n    /// @return `true` if user has voted, `false` otherwise\n    function hasMember(address _user) public view returns (bool);\n\n    /*/// @notice Setup eventsHistory for a poll\n    /// @param _eventsHistory address of eventsHistory contract\n    /// @return result code of an operation\n    function setupEventsHistory(address _eventsHistory) public returns (uint);*/\n\n    /// @notice Setup poll's listener\n    /// @param _listener should satisfy PollListenerInterface\n    /// @return result code of an operation\n    function setPollListener(address _listener) public returns (uint);\n\n\n    /// @notice Initializes a poll. Should not activate poll on this stage.\n    function init(\n        uint _optionsCount,\n        bytes32 _detailsIpfsHash,\n        uint _votelimit,\n        uint _deadline\n    ) public returns (uint);\n\n    /// @notice Votes for a picked option. Usually numbers from `1` to max value are used.\n    function vote(uint8 _choice) public returns (uint);\n\n    /// @notice Activates poll, so users can start voting.\n    function activatePoll() public returns (uint);\n\n    /// @notice Ends poll, stops any activity and users couldn't vote anymore.\n    function endPoll() public returns (uint);\n\n    /// @notice Eliminates poll, should be allowed to perform before activation or after poll will end.\n    function killPoll() public;\n\n    /// @notice Get full poll details\n    function getDetails() public view returns (\n        address _owner,\n        bytes32 _detailsIpfsHash,\n        uint _votelimit,\n        uint _deadline,\n        bool _status,\n        bool _active,\n        uint _creation,\n        uint _optionsCount\n    );\n\n    /// @notice Get information about current poll situation for existed options: how much tokens are placed for which options.\n    function getVotesBalances() public view returns (uint8[], uint[]);\n\n    /// @notice Changes details hash with a new version. Should be called before poll will be activated\n    /// Emits PollDetailsHashUpdated event\n    ///\n    /// @dev delegatecall only. poll owner only\n    ///\n    /// @param _detailsIpfsHash updated ipfs hash value\n    /// @return result code of an operation.\n    function updatePollDetailsIpfsHash(bytes32 _detailsIpfsHash) public returns (uint);\n}\n\n\n/// @title Defines an interface for poll listener\ncontract PollListenerInterface {\n\n    /// @notice Delegate method. Should be used only by poll instance during activation\n    function onActivatePoll() public;\n\n    /// @notice Delegate method. Should be used only by poll instance during voting\n    function onVote(address _user, uint8 _choice) public;\n\n    /// @notice Delegate method. Should be used only by poll instance during ending a poll\n    function onEndPoll() public;\n\n    /// @notice Delegate method. Should be used only by poll instance during killing a poll\n    function onRemovePoll() public;\n}\n",
+  "sourcePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/vote/PollInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/vote/PollInterface.sol",
+    "exportedSymbols": {
+      "PollInterface": [
+        34400
+      ],
+      "PollListenerInterface": [
+        34417
+      ]
+    },
+    "id": 34418,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34297,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:112"
+      },
+      {
+        "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/core/common/OwnedInterface.sol",
+        "file": "../core/common/OwnedInterface.sol",
+        "id": 34298,
+        "nodeType": "ImportDirective",
+        "scope": 34418,
+        "sourceUnit": 4523,
+        "src": "26:43:112",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 34299,
+              "name": "OwnedInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4522,
+              "src": "186:14:112",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_OwnedInterface_$4522",
+                "typeString": "contract OwnedInterface"
+              }
+            },
+            "id": 34300,
+            "nodeType": "InheritanceSpecifier",
+            "src": "186:14:112"
+          }
+        ],
+        "contractDependencies": [
+          4522
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Defines public interface for polls: how to interact and what could be asked.",
+        "fullyImplemented": false,
+        "id": 34400,
+        "linearizedBaseContracts": [
+          34400,
+          4522
+        ],
+        "name": "PollInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Gets poll's owner address",
+            "id": 34305,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "owner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34301,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "284:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34303,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34305,
+                  "src": "308:7:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34302,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "307:9:112"
+            },
+            "scope": 34400,
+            "src": "270:47:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets if poll is active or not",
+            "id": 34310,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "active",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "384:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34308,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34310,
+                  "src": "408:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34307,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:6:112"
+            },
+            "scope": 34400,
+            "src": "369:45:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets an index of an option chosen by user\n @param _member voted user\n @return choice of provided user",
+            "id": 34317,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "memberOptions",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34312,
+                  "name": "_member",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34317,
+                  "src": "575:15:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34311,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "575:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "574:17:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34315,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34317,
+                  "src": "613:5:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 34314,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "613:5:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "612:7:112"
+            },
+            "scope": 34400,
+            "src": "552:68:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Checks if provided user is already voted in this poll\n @param _user user to check\n @return `true` if user has voted, `false` otherwise",
+            "id": 34324,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "hasMember",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34320,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34319,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34324,
+                  "src": "810:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34318,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "810:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "809:15:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34323,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34322,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34324,
+                  "src": "846:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34321,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "845:6:112"
+            },
+            "scope": 34400,
+            "src": "791:61:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Setup poll's listener\n @param _listener should satisfy PollListenerInterface\n @return result code of an operation",
+            "id": 34331,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setPollListener",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34327,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34326,
+                  "name": "_listener",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34331,
+                  "src": "1266:17:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34325,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1266:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1265:19:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34330,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34329,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34331,
+                  "src": "1301:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34328,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1301:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1300:6:112"
+            },
+            "scope": 34400,
+            "src": "1241:66:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Initializes a poll. Should not activate poll on this stage.",
+            "id": 34344,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34333,
+                  "name": "_optionsCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1413:18:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34332,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1413:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34335,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1441:24:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 34334,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1441:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34337,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1475:15:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34336,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1475:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34339,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1500:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34338,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1500:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1403:117:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34342,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1537:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34341,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1537:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1536:6:112"
+            },
+            "scope": 34400,
+            "src": "1390:153:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Votes for a picked option. Usually numbers from `1` to max value are used.",
+            "id": 34351,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "vote",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34346,
+                  "name": "_choice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34351,
+                  "src": "1654:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 34345,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1654:5:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1653:15:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34349,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34351,
+                  "src": "1685:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34348,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1685:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1684:6:112"
+            },
+            "scope": 34400,
+            "src": "1640:51:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Activates poll, so users can start voting.",
+            "id": 34356,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "activatePoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1777:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34355,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34354,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34356,
+                  "src": "1796:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34353,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1796:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1795:6:112"
+            },
+            "scope": 34400,
+            "src": "1756:46:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Ends poll, stops any activity and users couldn't vote anymore.",
+            "id": 34361,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "endPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34357,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1903:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34359,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34361,
+                  "src": "1922:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34358,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1922:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1921:6:112"
+            },
+            "scope": 34400,
+            "src": "1887:41:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Eliminates poll, should be allowed to perform before activation or after poll will end.",
+            "id": 34364,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "killPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2055:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34363,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2064:0:112"
+            },
+            "scope": 34400,
+            "src": "2038:27:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get full poll details",
+            "id": 34383,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34365,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2128:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34382,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34367,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2161:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34366,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2161:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34369,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2185:24:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 34368,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2185:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34371,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2219:15:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34370,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2219:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34373,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2244:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34372,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2244:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34375,
+                  "name": "_status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2268:12:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34374,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2268:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34377,
+                  "name": "_active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2290:12:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34376,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2290:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34379,
+                  "name": "_creation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2312:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34378,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2312:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34381,
+                  "name": "_optionsCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2336:18:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34380,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2336:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2151:209:112"
+            },
+            "scope": 34400,
+            "src": "2109:252:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get information about current poll situation for existed options: how much tokens are placed for which options.",
+            "id": 34392,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getVotesBalances",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2520:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34387,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34392,
+                  "src": "2544:7:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_memory_ptr",
+                    "typeString": "uint8[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34385,
+                      "name": "uint8",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2544:5:112",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 34386,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2544:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                      "typeString": "uint8[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34390,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34392,
+                  "src": "2553:6:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34388,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2553:4:112",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 34389,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2553:6:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2543:17:112"
+            },
+            "scope": 34400,
+            "src": "2495:66:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Changes details hash with a new version. Should be called before poll will be activated\n Emits PollDetailsHashUpdated event\n\n    /// @dev delegatecall only. poll owner only\n\n    /// @param _detailsIpfsHash updated ipfs hash value\n @return result code of an operation.",
+            "id": 34399,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "updatePollDetailsIpfsHash",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34395,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34394,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34399,
+                  "src": "2914:24:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 34393,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2914:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2913:26:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34398,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34397,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34399,
+                  "src": "2956:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34396,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2956:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2955:6:112"
+            },
+            "scope": 34400,
+            "src": "2879:83:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 34418,
+        "src": "160:2804:112"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Defines an interface for poll listener",
+        "fullyImplemented": false,
+        "id": 34417,
+        "linearizedBaseContracts": [
+          34417
+        ],
+        "name": "PollListenerInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during activation",
+            "id": 34403,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onActivatePoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34401,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3166:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34402,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3175:0:112"
+            },
+            "scope": 34417,
+            "src": "3143:33:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during voting",
+            "id": 34410,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onVote",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34405,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34410,
+                  "src": "3282:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34404,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3282:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34407,
+                  "name": "_choice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34410,
+                  "src": "3297:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 34406,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3297:5:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3281:30:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34409,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3318:0:112"
+            },
+            "scope": 34417,
+            "src": "3266:53:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during ending a poll",
+            "id": 34413,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onEndPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34411,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3434:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34412,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3443:0:112"
+            },
+            "scope": 34417,
+            "src": "3416:28:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during killing a poll",
+            "id": 34416,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onRemovePoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34414,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3563:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34415,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3572:0:112"
+            },
+            "scope": 34417,
+            "src": "3542:31:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 34418,
+        "src": "3017:558:112"
+      }
+    ],
+    "src": "0:3576:112"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/vote/PollInterface.sol",
+    "exportedSymbols": {
+      "PollInterface": [
+        34400
+      ],
+      "PollListenerInterface": [
+        34417
+      ]
+    },
+    "id": 34418,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34297,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:112"
+      },
+      {
+        "absolutePath": "/Users/alesanro/Documents/Projects/ChronoBank/SmartContracts/contracts/core/common/OwnedInterface.sol",
+        "file": "../core/common/OwnedInterface.sol",
+        "id": 34298,
+        "nodeType": "ImportDirective",
+        "scope": 34418,
+        "sourceUnit": 4523,
+        "src": "26:43:112",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 34299,
+              "name": "OwnedInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4522,
+              "src": "186:14:112",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_OwnedInterface_$4522",
+                "typeString": "contract OwnedInterface"
+              }
+            },
+            "id": 34300,
+            "nodeType": "InheritanceSpecifier",
+            "src": "186:14:112"
+          }
+        ],
+        "contractDependencies": [
+          4522
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Defines public interface for polls: how to interact and what could be asked.",
+        "fullyImplemented": false,
+        "id": 34400,
+        "linearizedBaseContracts": [
+          34400,
+          4522
+        ],
+        "name": "PollInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Gets poll's owner address",
+            "id": 34305,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "owner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34301,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "284:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34303,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34305,
+                  "src": "308:7:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34302,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "307:9:112"
+            },
+            "scope": 34400,
+            "src": "270:47:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets if poll is active or not",
+            "id": 34310,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "active",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "384:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34308,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34310,
+                  "src": "408:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34307,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:6:112"
+            },
+            "scope": 34400,
+            "src": "369:45:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Gets an index of an option chosen by user\n @param _member voted user\n @return choice of provided user",
+            "id": 34317,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "memberOptions",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34312,
+                  "name": "_member",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34317,
+                  "src": "575:15:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34311,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "575:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "574:17:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34315,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34317,
+                  "src": "613:5:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 34314,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "613:5:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "612:7:112"
+            },
+            "scope": 34400,
+            "src": "552:68:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Checks if provided user is already voted in this poll\n @param _user user to check\n @return `true` if user has voted, `false` otherwise",
+            "id": 34324,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "hasMember",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34320,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34319,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34324,
+                  "src": "810:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34318,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "810:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "809:15:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34323,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34322,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34324,
+                  "src": "846:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34321,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "845:6:112"
+            },
+            "scope": 34400,
+            "src": "791:61:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Setup poll's listener\n @param _listener should satisfy PollListenerInterface\n @return result code of an operation",
+            "id": 34331,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setPollListener",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34327,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34326,
+                  "name": "_listener",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34331,
+                  "src": "1266:17:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34325,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1266:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1265:19:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34330,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34329,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34331,
+                  "src": "1301:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34328,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1301:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1300:6:112"
+            },
+            "scope": 34400,
+            "src": "1241:66:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Initializes a poll. Should not activate poll on this stage.",
+            "id": 34344,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34333,
+                  "name": "_optionsCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1413:18:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34332,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1413:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34335,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1441:24:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 34334,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1441:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34337,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1475:15:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34336,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1475:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34339,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1500:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34338,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1500:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1403:117:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34342,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34344,
+                  "src": "1537:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34341,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1537:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1536:6:112"
+            },
+            "scope": 34400,
+            "src": "1390:153:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Votes for a picked option. Usually numbers from `1` to max value are used.",
+            "id": 34351,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "vote",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34346,
+                  "name": "_choice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34351,
+                  "src": "1654:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 34345,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1654:5:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1653:15:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34349,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34351,
+                  "src": "1685:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34348,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1685:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1684:6:112"
+            },
+            "scope": 34400,
+            "src": "1640:51:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Activates poll, so users can start voting.",
+            "id": 34356,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "activatePoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1777:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34355,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34354,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34356,
+                  "src": "1796:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34353,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1796:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1795:6:112"
+            },
+            "scope": 34400,
+            "src": "1756:46:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Ends poll, stops any activity and users couldn't vote anymore.",
+            "id": 34361,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "endPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34357,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1903:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34359,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34361,
+                  "src": "1922:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34358,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1922:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1921:6:112"
+            },
+            "scope": 34400,
+            "src": "1887:41:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Eliminates poll, should be allowed to perform before activation or after poll will end.",
+            "id": 34364,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "killPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2055:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34363,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2064:0:112"
+            },
+            "scope": 34400,
+            "src": "2038:27:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get full poll details",
+            "id": 34383,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34365,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2128:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34382,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34367,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2161:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34366,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2161:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34369,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2185:24:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 34368,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2185:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34371,
+                  "name": "_votelimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2219:15:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34370,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2219:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34373,
+                  "name": "_deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2244:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34372,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2244:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34375,
+                  "name": "_status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2268:12:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34374,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2268:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34377,
+                  "name": "_active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2290:12:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34376,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2290:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34379,
+                  "name": "_creation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2312:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34378,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2312:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34381,
+                  "name": "_optionsCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34383,
+                  "src": "2336:18:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34380,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2336:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2151:209:112"
+            },
+            "scope": 34400,
+            "src": "2109:252:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get information about current poll situation for existed options: how much tokens are placed for which options.",
+            "id": 34392,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getVotesBalances",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2520:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34387,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34392,
+                  "src": "2544:7:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_memory_ptr",
+                    "typeString": "uint8[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34385,
+                      "name": "uint8",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2544:5:112",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 34386,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2544:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                      "typeString": "uint8[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34390,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34392,
+                  "src": "2553:6:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34388,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2553:4:112",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 34389,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2553:6:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2543:17:112"
+            },
+            "scope": 34400,
+            "src": "2495:66:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Changes details hash with a new version. Should be called before poll will be activated\n Emits PollDetailsHashUpdated event\n\n    /// @dev delegatecall only. poll owner only\n\n    /// @param _detailsIpfsHash updated ipfs hash value\n @return result code of an operation.",
+            "id": 34399,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "updatePollDetailsIpfsHash",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34395,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34394,
+                  "name": "_detailsIpfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34399,
+                  "src": "2914:24:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 34393,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2914:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2913:26:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34398,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34397,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34399,
+                  "src": "2956:4:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34396,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2956:4:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2955:6:112"
+            },
+            "scope": 34400,
+            "src": "2879:83:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 34418,
+        "src": "160:2804:112"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Defines an interface for poll listener",
+        "fullyImplemented": false,
+        "id": 34417,
+        "linearizedBaseContracts": [
+          34417
+        ],
+        "name": "PollListenerInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during activation",
+            "id": 34403,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onActivatePoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34401,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3166:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34402,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3175:0:112"
+            },
+            "scope": 34417,
+            "src": "3143:33:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during voting",
+            "id": 34410,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onVote",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34405,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34410,
+                  "src": "3282:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34404,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3282:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34407,
+                  "name": "_choice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34410,
+                  "src": "3297:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 34406,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3297:5:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3281:30:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34409,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3318:0:112"
+            },
+            "scope": 34417,
+            "src": "3266:53:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during ending a poll",
+            "id": 34413,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onEndPoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34411,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3434:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34412,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3443:0:112"
+            },
+            "scope": 34417,
+            "src": "3416:28:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Delegate method. Should be used only by poll instance during killing a poll",
+            "id": 34416,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onRemovePoll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34414,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3563:2:112"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 34415,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3572:0:112"
+            },
+            "scope": 34417,
+            "src": "3542:31:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 34418,
+        "src": "3017:558:112"
+      }
+    ],
+    "src": "0:3576:112"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-06T09:20:58.877Z"
+}
